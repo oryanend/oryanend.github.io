@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Altone Trial";
+    src: url("../fonts/altone/AltoneTrial-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Altone Trial";
+    src: url("../fonts/altone/AltoneTrial-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Altone Trial";
+    src: url("../fonts/altone/AltoneTrial-BoldOblique.ttf") format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Altone Trial";
+    src: url("../fonts/altone/AltoneTrial-RegularOblique.ttf") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "UNDERRATED";
+    src: url("../fonts/underrated/UNDERRATED-UltraBold Personal Use.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cinzabtn: #ECECEC;
+    --preto: #131313;
+    --vermelho: #AA1E00;
+    --branco: #FCFCFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Altone Trial", sans-serif;
+}
+
+body{
+    background-color: var(--branco);
+    min-height: 200vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header > a#item-1{
+    position: relative;
+    font-weight: 700;
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header > ul > li > a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--preto);
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header > ul > li > a:hover {
+    color: #AA1E00;
+}
+
+header.sticky{
+    padding: 20px 100px;
+    background-color: var(--branco);
+}
+/*NAV-BAR*/
+
+/*Section*/
+div.main-background{
+    position: relative;
+    margin: auto;
+    top: 100px;
+    width: 100%;
+    height: 80vh;
+    background: url("../images/background.jpg");
+    background-size: cover;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+}
+
+div.main-background > div#mainTxt > h1 {
+    text-transform: uppercase;
+    font-family: 'UNDERRATED', sans-serif;
+    font-size: 45pt;
+    padding: 15px;
+}
+
+div.main-background > div#mainTxt{
+    margin: auto;
+    line-height: normal;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main-background > div#mainTxt p{
+    font-size: 15pt;
+    text-transform: uppercase;
+}
+
+div.main-background > div#mainTxt > div > a img{
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    padding: 8px;
+    margin: 15px;
+    top: 500px;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: stretch;
+}
