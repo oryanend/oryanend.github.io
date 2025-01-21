@@ -1,21 +1,13 @@
-const scrollers = document.querySelectorAll(".scroller");
-
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
-
-function addAnimation() {
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-
-        const scrollerInner = document.querySelector('div.scroller__inner');
-        const scrollerContent = Array.from(scrollerInner.children);
-
-        scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute('aria-hidden',true);
-            scrollerInner.appendChild(duplicatedItem);
-        })
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('show', 'animated');
+            observer.unobserve(entry.target);
+        }
     });
-}
+});
+
+
+const hiddenSections = document.getElementsByTagName('section');
+Array.from(hiddenSections).forEach((el) => observer.observe(el));
