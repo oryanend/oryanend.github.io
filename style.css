@@ -4,6 +4,7 @@
     --background: #131418;
     --secondary-background: #18191D;
     --color-text: #f8f8f8;
+    --select-color-text: #1f2937;
     --title-gradient: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(125,125,125,1) 100%);
 }
 
@@ -85,7 +86,7 @@ body {
 .tooltip-text {
     visibility: hidden;
     width: auto;
-    background-color: #1f2937;
+    background-color: var(--select-color-text);
     color: white;
     text-align: center;
     border-radius: 4px;
