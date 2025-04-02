@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Oliveira - Portfólio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'title-gradient': 'var(--title-gradient)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[var(--background)]">
+
+<nav class="bg-[var(--background)]">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <!-- Mobile menu button -->
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-inset" aria-controls="mobile-menu">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Abrir menu</span>
+                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex shrink-0 items-center">
+                    <img class="h-8 w-auto" src="assets/corvoBrancoLogo(f8f8f8).png" alt="Logo">
+                </div>
+                <div class="hidden sm:ml-6 sm:block absolute right-0">
+                    <div class="flex space-x-4">
+                        <a href="#sobre" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Sobre</a>
+                        <a href="#" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Projetos</a>
+                        <a href="#" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Sobre</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projetos</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
+        </div>
+    </div>
+</nav>
+
+
+<main class="relative min-h-screen flex flex-col justify-center overflow-hidden">
+
+    <section class="grid min-h-full place-items-center px-6 py-24 sm:py-40 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-5xl tracking-tight sm:text-7xl font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Ryan Oliveira</h1>
+            <p class="mt-2 text-lg sm:text-xl/8 text-sub-title">Software Engineer | Desenvolvedor Back-End</p>
+        </div>
+    </section>
+
+
+    <section class="mt-5 grid min-h-full flex flex-col justify-center px-6 py-24 sm:py-10 lg:px-8 background-secondary" id="sobre">
+        <div class="flex space-x-16 overflow-hidden">
+            <div class="flex space-x-16 animate-loop-scroll">
+                <img src="assets/slide/spring-boot.png" class="max-w-none" alt="Spring Boot">
+                <img src="assets/slide/js.png" class="max-w-none" alt="JavaScript">
+                <img src="assets/slide/postgres.svg.png" class="max-w-none" alt="PostgreSQL">
+                <img src="assets/slide/mysql.png" class="max-w-none" alt="MySQL">
+                <img src="assets/slide/aws.png" class="max-w-none" alt="AWS">
+                <img src="assets/slide/IntelliJ.png" class="max-w-none" alt="IntelliJ">
+                <img src="assets/slide/postman.png" class="max-w-none" alt="Postman">
+            </div>
+
+            <div class="flex space-x-16 animate-loop-scroll" aria-hidden="true">
+                <img src="assets/slide/spring-boot.png" class="max-w-none" alt="Spring Boot">
+                <img src="assets/slide/js.png" class="max-w-none" alt="JavaScript">
+                <img src="assets/slide/postgres.svg.png" class="max-w-none" alt="PostgreSQL">
+                <img src="assets/slide/mysql.png" class="max-w-none" alt="MySQL">
+                <img src="assets/slide/aws.png" class="max-w-none" alt="AWS">
+                <img src="assets/slide/IntelliJ.png" class="max-w-none" alt="IntelliJ">
+                <img src="assets/slide/postman.png" class="max-w-none" alt="Postman">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-10 mb-20">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+            <img class="w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="Dashboard">
+            <img class="w-full hidden dark:block" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg" alt="Dashboard">
+
+            <div class="mt-4 md:mt-0">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Olá, tudo bem? Está procurando por um programador, muito prazer, Ryan.</h2>
+                <p class="mb-3 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+
+
+                <div class="mb-3 flex space-x-4 justify-around h-8 object-contain md:justify-between">
+                    <div class="icon-tooltip"><img src="assets/slide/java.png" alt="Java"><span class="tooltip-text">Java</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/spring-boot.png" alt="Spring Boot"><span class="tooltip-text">Spring Boot</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/js.png" alt="JavaScript"><span class="tooltip-text">JavaScript</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/aws.png" alt="AWS"><span class="tooltip-text">AWS</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/postgres.svg.png" alt="PostgreSQL"><span class="tooltip-text">PostgreSQL</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/mysql.png" alt="MySQL"><span class="tooltip-text">MySQL</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/IntelliJ.png" alt="IntelliJ IDEA"><span class="tooltip-text">IntelliJ IDEA</span></div>
+                    <div class="icon-tooltip"><img src="assets/slide/postman.png" alt="Postman"><span class="tooltip-text">Postman</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer class="p-4 md:p-8 lg:p-3 bg-[var(--secondary-background)]">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center">
+            <img src="assets/corvoBrancoLogo(f8f8f8).png" class="h-8 object-contain mb-2" alt="Logo">
+        </a>
+
+        <span class="text-sm text-gray-500 sm:text-center hover:text-gray-100">© 2025 <a href="#" class="hover:underline">oryanEnd</a></span>
+
+        <ul class="mt-3 flex space-x-4 justify-center items-center mb-6">
+            <li><a href="#"><img class="h-5 object-contain opacity-50 hover:opacity-100" src="assets/footer/linkedin-icon.svg" alt="LinkedIn"></a></li>
+            <li><a href="#"><img class="h-5 object-contain opacity-50 hover:opacity-100" src="assets/footer/github-white-icon.svg" alt="GitHub"></a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
