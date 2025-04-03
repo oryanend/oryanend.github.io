@@ -59,7 +59,7 @@
                 <div class="hidden sm:ml-6 sm:block absolute right-0">
                     <div class="flex space-x-4">
                         <a href="#sobre" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Sobre</a>
-                        <a href="#" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Projetos</a>
+                        <a href="#projetos" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Projetos</a>
                         <a href="#contatos" class="rounded-md px-3 py-2 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Contato</a>
                     </div>
                 </div>
@@ -70,12 +70,11 @@
     <div id="mobile-menu" class="hidden sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
             <a href="#sobre" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Sobre</a>
-            <a href="#" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Projetos</a>
+            <a href="#projetos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Projetos</a>
             <a href="#contatos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Contato</a>
         </div>
     </div>
 </nav>
-
 
 <main class="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
@@ -85,7 +84,6 @@
             <p class="mt-2 text-lg sm:text-xl/8 text-sub-title">Software Engineer | Desenvolvedor Back-End</p>
         </div>
     </section>
-
 
     <section class="mt-5 grid min-h-full flex flex-col justify-center px-6 py-20 sm:py-10 lg:px-8 background-secondary scroll-mt-[-130px]" id="sobre">
         <div class=" w-full overflow-hidden">
@@ -137,8 +135,10 @@
         </div>
     </section>
 
+    <section class="mt-10 mb-20" id="projetos">
+    </section>
 
-    <section class="mt-10 grid min-h-full place-items-center px-6 py-12 sm:py-32 lg:px-8 bg-[var(--secondary-background)] scroll-mt-[-50px] rounded-t-[6vw]" id="contatos">
+    <section class="mt-10 grid min-h-full place-items-center px-6 py-12 sm:py-32 lg:px-8 bg-[var(--secondary-background)] scroll-mt-[-50px]" id="contatos">
         <img src="assets/handShake.png" class="h-60" alt="contato-icon">
 
             <div class="text-center">
@@ -148,7 +148,7 @@
                     <br>que estava procurando, entre em contato!</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
 
-                    <a href="mailto:ryanalmeidaend@gmail.com" target="_blank"><button class="relative h-12 overflow-hidden rounded bg-[var(--select-color-text)] px-5 py-2.5 text-gray-300 transition-all duration-300 hover:bg-[#485363] hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2 hover:text-white "><span class="relative">Email</span></button></a>
+                    <a href="mailto:ryanalmeidaend@gmail.com" target="_blank"><button class="relative h-12 overflow-hidden rounded bg-[#736647] px-5 py-2.5 text-gray-300 transition-all duration-300 hover:bg-[#c7bca2] hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2 hover:text-[#272822] hover:font-medium "><span class="relative">Email</span></button></a>
 
                     <a href="http://wa.me/11994787028" target="_blank">
                         <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200 hover:underline underline-offset-8"><span>Whatsapp</span><div class="ml-1 transition group-hover:translate-x-1"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
@@ -164,15 +164,15 @@
 <footer class="p-4 md:p-8 lg:p-3 bg-[var(--secondary-background)] inset-shadow-sm drop-shadow-lg">
     <div class="mx-auto max-w-screen-xl text-center">
 
-        <div class="flex flex-col md:flex-row justify-around items-center gap-y-4 md:space-x-4">
+        <div class="flex flex-col md:flex-row justify-around items-center gap-y-4 md:space-x-4 ">
             <!-- Logo (oculto em mobile) -->
             <a href="#" class="hidden md:flex justify-center items-center">
-                <img src="assets/corvoBrancoLogo(f8f8f8).png" class="h-8 object-contain mb-2" alt="Logo">
+                <img src="assets/corvoBrancoLogo(f8f8f8).png" class="h-8 object-contain mb-2 " alt="Logo">
             </a>
 
             <div class="flex space-x-4">
                 <a href="#sobre" class="rounded-md px-3 py-5 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Sobre</a>
-                <a href="#" class="rounded-md px-3 py-5 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Projetos</a>
+                <a href="#projetos" class="rounded-md px-3 py-5 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Projetos</a>
                 <a href="#contatos" class="rounded-md px-3 py-5 text-sm link-text-navbar hover:underline underline-offset-8" style="color: var(--color-text)">Contato</a>
             </div>
 
