@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Oliveira - Portfólio</title>
-
+    <link rel="icon" type="image/x-icon" href="assets/icons/corvoBrancoLogo_f8f8f8_.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="scripts/navbar-hamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-
     <script>
         tailwind.config = {
             theme: {
@@ -27,7 +27,6 @@
         }
     </script>
 
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-[var(--background)]">
@@ -146,15 +145,13 @@
                 <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Ao longo da minha jornada como programador, <br>desenvolvi diversos projetos. Estes são os principais:</p>
             </div>
 
-            <!-- Container de cards modificado -->
             <div class="flex flex-wrap justify-center gap-4">
                 <!-- Card 1 -->
                 <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
-                    <!-- Carrossel visível apenas em telas médias/grandes -->
                     <div class="hidden sm:block">
                         <div class="relative w-full">
                             <div class="relative h-40 overflow-hidden rounded-t-lg">
-                                <img src="https://freefrontend.com/assets/img/tailwind-cards/social-cards-with-tailwind-css.jpg"
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/best-4th-of-july-movies-to-stream-1654278088.jpg?crop=0.6223479490806223xw:1xh;center,top&resize=1200:*"
                                      class="absolute block w-full h-full object-cover"
                                      alt="img-project">
                             </div>
@@ -163,13 +160,14 @@
 
                     <div class="p-4">
                         <a href="#">
-                            <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy acquisitions 2021</h5>
+                            <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Movies API</h5>
                         </a>
                         <div class="mb-2">
                             <span class="bg-blue-100 text-blue-800 text-xs font-medium me-1 px-2 py-0.5 rounded dark:bg-[--select-color-text] dark:text-blue-300">Java</span>
                             <span class="bg-blue-100 text-blue-800 text-xs font-medium me-1 px-2 py-0.5 rounded dark:bg-[--select-color-text] dark:text-blue-300">Spring</span>
                         </div>
-                        <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">Biggest enterprise technology acquisitions of 2021 in reverse chronological order.</p>
+                        <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">API REST para gerenciar um blog de filmes com funcionalidades de CRUD, comentários e avaliações.</p>
+                        <a href="https://github.com/oryanend/api-movies" target="_blank">
                         <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-[#1f2937] px-4 font-medium text-blue-300 text-sm
                transition-all duration-300 hover:bg-blue-900 hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2">
                             <span>Detalhes</span>
@@ -179,18 +177,14 @@
                                 </svg>
                             </div>
                         </button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Card 2 (exemplo) -->
                 <!-- <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
                     [conteúdo do card]
                 </div> -->
 
-                <!-- Card 3 (exemplo) -->
-                <!-- <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
-                    [conteúdo do card]
-                </div> -->
             </div>
         </div>
     </section>
