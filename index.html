@@ -9,6 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="scripts/navbar-hamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <script>
         tailwind.config = {
@@ -69,9 +73,9 @@
 
     <div id="mobile-menu" class="hidden sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
-            <a href="#sobre" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Sobre</a>
-            <a href="#projetos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Projetos</a>
-            <a href="#contatos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-white">Contato</a>
+            <a href="#sobre" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300 ">Sobre</a>
+            <a href="#projetos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Projetos</a>
+            <a href="#contatos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Contato</a>
         </div>
     </div>
 </nav>
@@ -122,20 +126,73 @@
 
 
                 <div class="mb-3 flex flex-wrap gap-4 justify-center md:justify-around">
-                    <div class="icon-tooltip"><img src="assets/slide/java.png" class="grayscale hover:grayscale-0" alt="Java"><span class="tooltip-text ">Java</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/spring-boot.png" class="grayscale hover:grayscale-0"  alt="Spring Boot"><span class="tooltip-text">Spring Boot</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/js.png" class="grayscale hover:grayscale-0"  alt="JavaScript"><span class="tooltip-text">JavaScript</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/aws.png" class="grayscale hover:grayscale-0" alt="AWS"><span class="tooltip-text">AWS</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/postgres.png" class="grayscale hover:grayscale-0"  alt="PostgreSQL"><span class="tooltip-text">PostgreSQL</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/mysql.png" class="grayscale hover:grayscale-0"  alt="MySQL"><span class="tooltip-text">MySQL</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/IntelliJ.png" class="grayscale hover:grayscale-0"  alt="IntelliJ IDEA"><span class="tooltip-text">IntelliJ IDEA</span></div>
-                    <div class="icon-tooltip"><img src="assets/slide/postman.png" class="grayscale hover:grayscale-0"  alt="Postman"><span class="tooltip-text">Postman</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/java.png" class="grayscale hover:grayscale-0" alt="Java"><span class="tooltip-text ">Java</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/spring-boot.png" class="grayscale hover:grayscale-0"  alt="Spring Boot"><span class="tooltip-text">Spring Boot</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/js.png" class="grayscale hover:grayscale-0"  alt="JavaScript"><span class="tooltip-text">JavaScript</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/aws.png" class="grayscale hover:grayscale-0" alt="AWS"><span class="tooltip-text">AWS</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/postgres.png" class="grayscale hover:grayscale-0"  alt="PostgreSQL"><span class="tooltip-text">PostgreSQL</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/mysql.png" class="grayscale hover:grayscale-0"  alt="MySQL"><span class="tooltip-text">MySQL</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/IntelliJ.png" class="grayscale hover:grayscale-0"  alt="IntelliJ IDEA"><span class="tooltip-text">IntelliJ IDEA</span></div>
+                    <div class="icon-tooltip text-blue-300 text-xs font-medium"><img src="assets/slide/postman.png" class="grayscale hover:grayscale-0"  alt="Postman"><span class="tooltip-text">Postman</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="mt-10 mb-20" id="projetos">
+    <section class="mt-10 mb-20 scroll-mt-[-50px]" id="projetos">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center lg:mb-12 mb-8">
+                <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Projetos</h2>
+                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Ao longo da minha jornada como programador, <br>desenvolvi diversos projetos. Estes são os principais:</p>
+            </div>
+
+            <!-- Container de cards modificado -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Card 1 -->
+                <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
+                    <!-- Carrossel visível apenas em telas médias/grandes -->
+                    <div class="hidden sm:block">
+                        <div class="relative w-full">
+                            <div class="relative h-40 overflow-hidden rounded-t-lg">
+                                <img src="https://freefrontend.com/assets/img/tailwind-cards/social-cards-with-tailwind-css.jpg"
+                                     class="absolute block w-full h-full object-cover"
+                                     alt="img-project">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <a href="#">
+                            <h5 class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy acquisitions 2021</h5>
+                        </a>
+                        <div class="mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium me-1 px-2 py-0.5 rounded dark:bg-[--select-color-text] dark:text-blue-300">Java</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium me-1 px-2 py-0.5 rounded dark:bg-[--select-color-text] dark:text-blue-300">Spring</span>
+                        </div>
+                        <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">Biggest enterprise technology acquisitions of 2021 in reverse chronological order.</p>
+                        <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-[#1f2937] px-4 font-medium text-blue-300 text-sm
+               transition-all duration-300 hover:bg-blue-900 hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2">
+                            <span>Detalhes</span>
+                            <div class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-4 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
+                                    <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 (exemplo) -->
+                <!-- <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
+                    [conteúdo do card]
+                </div> -->
+
+                <!-- Card 3 (exemplo) -->
+                <!-- <div class="w-full sm:max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-[--secondary-background] dark:border-gray-700">
+                    [conteúdo do card]
+                </div> -->
+            </div>
+        </div>
     </section>
 
     <section class="mt-10 grid min-h-full place-items-center px-6 py-12 sm:py-32 lg:px-8 bg-[var(--secondary-background)] scroll-mt-[-50px]" id="contatos">
@@ -143,12 +200,12 @@
 
             <div class="text-center">
 
-                <h1 class="mt-4 text-5xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight sm:text-7xl">Contatos</h1>
-                <p class="mt-6 font-light text-gray-500 dark:text-gray-400 text-lg text-pretty md:text-lg sm:text-xl/8">Agora que você viu que faço parte do perfil
+                <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight sm:text-7xl">Contatos</h1>
+                <p class="mt-5 font-light text-gray-500 dark:text-gray-400 text-lg text-pretty md:text-lg sm:text-xl/8">Agora que você viu que faço parte do perfil
                     <br>que estava procurando, entre em contato!</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
 
-                    <a href="mailto:ryanalmeidaend@gmail.com" target="_blank"><button class="relative h-12 overflow-hidden rounded bg-[#736647] px-5 py-2.5 text-gray-300 transition-all duration-300 hover:bg-[#c7bca2] hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2 hover:text-[#272822] hover:font-medium "><span class="relative">Email</span></button></a>
+                    <a href="mailto:ryanalmeidaend@gmail.com" target="_blank"><button class="relative h-12 overflow-hidden rounded bg-[#1f2937] px-5 py-2.5 text-blue-200 transition-all duration-300 hover:bg-blue-900 hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2 hover:text-blue-200 hover:font-medium "><span class="relative">Email</span></button></a>
 
                     <a href="http://wa.me/11994787028" target="_blank">
                         <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200 hover:underline underline-offset-8"><span>Whatsapp</span><div class="ml-1 transition group-hover:translate-x-1"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></button>
