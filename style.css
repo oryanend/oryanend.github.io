@@ -100,9 +100,16 @@ body {
 .scroll {
     position: relative;
     display: flex;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+    mask-image: linear-gradient(
+            90deg,
+            transparent,
+            #fff 20%, /* Lado Esquerdo */
+            #fff 80%, /* Lado Direito  */
+            transparent
+    );
 }
 
 .scroll div {
