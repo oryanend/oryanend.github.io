@@ -179,7 +179,7 @@ body {
     width: 200%;
     height: 200vh;
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    opacity: .3;
+    opacity: .375;
     visibility: visible;
     animation: noise-animation var(--noise-animation-time) infinite;
 }

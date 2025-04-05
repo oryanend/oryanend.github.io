@@ -31,7 +31,7 @@
         <div class="relative flex h-16 items-center justify-between">
             <!-- Mobile Menu Button -->
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <button type="button" onclick="toggleMenu()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                <button type="button" onclick="toggleMenu()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition-all duration-300 hover:bg-blue-900 hover:ring-2 hover:ring-neutral-800 hover:ring-offset-2 hover:text-blue-200 hover:font-medium " aria-controls="mobile-menu" aria-expanded="false">
                     <svg id="menu-open-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
@@ -62,9 +62,9 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
-            <a href="#sobre" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Sobre</a>
-            <a href="#projetos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Projetos</a>
-            <a href="#contatos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Contato</a>
+            <a href="#sobre" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 transition-all duration-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Sobre</a>
+            <a href="#projetos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 transition-all duration-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Projetos</a>
+            <a href="#contatos" onclick="toggleMenu()" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 transition-all duration-300 hover:bg-[var(--select-color-text)] hover:text-blue-300">Contato</a>
         </div>
     </div>
 </nav>
