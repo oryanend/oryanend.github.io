@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="scripts/navbar-hamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
 
     <script>
@@ -34,7 +35,7 @@
 <div class="noise"></div>
 <div class="background-gloom"></div>
 
-<nav class="bg-transparent relative z-30">
+<nav class="bg-transparent relative z-30 ">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <!-- Mobile menu button -->
@@ -84,16 +85,16 @@
 
 <main class="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
-    <section class="grid min-h-full place-items-center px-6 py-24 sm:py-40 lg:px-8">
-        <div class="text-center">
+    <section class="grid min-h-full place-items-center px-6 py-24 sm:py-40 lg:px-8 image-animation" >
+        <div class="text-center " >
             <h1 class="text-5xl tracking-tight sm:text-7xl font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Ryan Oliveira</h1>
             <p class="mt-2 text-lg sm:text-xl/8 text-sub-title">Software Engineer | Desenvolvedor Back-End</p>
         </div>
 
     </section>
 
-    <section class="mt-5 grid min-h-full flex flex-col justify-center px-6 py-20 sm:py-10 lg:px-8 background-secondary scroll-mt-[-130px]" id="sobre">
-        <div class=" w-full overflow-hidden">
+    <section class="mt-5 grid min-h-full flex flex-col justify-center px-6 py-16 sm:py-10 lg:px-8 background-secondary scroll-mt-[-130px] " id="sobre">
+        <div class=" w-full overflow-hidden image" >
             <div class="scroll imgBox" style="--time:50s">
                 <div>
                     <img src="assets/slide/spring-boot.png" class="max-w-none grayscale hover:grayscale-0" alt="Spring Boot">
@@ -118,11 +119,12 @@
 
     </section>
 
-    <section class="mt-10 mb-20">
-        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-            <img class="w-full dark:hidden md:block hidden" src="assets/computer.png" alt="pc-oryanend">
-            <img class="w-full hidden dark:md:block "  src="assets/computer.png" alt="pc-oryanend">
-
+    <section class="mt-10 mb-20 ">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 ">
+            <div>
+                <img class="w-full dark:hidden md:block hidden" src="assets/computer.png" alt="pc-oryanend">
+                <img class="w-full hidden dark:md:block "  src="assets/computer.png" alt="pc-oryanend">
+            </div>
             <div class="mt-4 md:mt-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Está procurando um programador? Se sim, acabou de encontrá-lo!</h2>
                 <p class="mb-5 font-light text-gray-500 md:text-lg dark:text-gray-400">Muito prazer! Fico feliz em saber que você se dedicou a me conhecer. Meu nome é Ryan de Almeida Oliveira e sou Desenvolvedor Back-end, especializado na criação de softwares, APIs e bancos de dados. Para desenvolver essas soluções impactantes, utilizo:</p>
@@ -142,10 +144,10 @@
         </div>
     </section>
 
-    <section class="mt-10 mb-20 scroll-mt-[-50px]" id="projetos">
+    <section class="mt-10 mb-20 scroll-mt-[-30px]" id="projetos">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center lg:mb-12 mb-8">
-                <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight">Projetos</h2>
+                <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight ">Projetos</h2>
                 <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Ao longo da minha jornada como programador, <br>desenvolvi diversos projetos. Estes são os principais:</p>
             </div>
 
@@ -200,7 +202,7 @@
             <div class="text-center">
 
                 <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-[image:var(--title-gradient)] leading-tight sm:text-7xl">Contatos</h1>
-                <p class="mt-5 font-light text-gray-500 dark:text-gray-400 text-lg text-pretty md:text-lg sm:text-xl/8">Agora que você viu que faço parte do perfil
+                <p class="mt-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Agora que você viu que faço parte do perfil
                     <br>que estava procurando, entre em contato!</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
 
