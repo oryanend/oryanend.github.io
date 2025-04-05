@@ -6,8 +6,13 @@
     --color-text: #f8f8f8;
     --select-color-text: #1f2937;
     --title-gradient: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(125,125,125,1) 100%);
-}
 
+    /* Animation */
+    --transition-time: 0.2s;
+    --loop-scroll-time: 20s;
+    --noise-animation-time: 0.2s;
+    --enter-animation-time: 0.8s;
+}
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -18,12 +23,10 @@ body {
     overflow-x: hidden;
 }
 
-
-/* ===== TYPOGRAPHY ===== */
 .link-text-navbar {
     color: var(--color-text);
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
+    transition: color var(--transition-time);
+    -webkit-transition: color var(--transition-time);
 }
 
 .text-main-title {
@@ -40,8 +43,6 @@ body {
     background-clip: text;
 }
 
-/* ===== COMPONENTS ===== */
-/* Background Secondary */
 .background-secondary {
     background-color: var(--secondary-background);
 }
@@ -49,23 +50,11 @@ body {
 .background-secondary img {
     height: 50px;
     opacity: 30%;
-    transition: opacity 0.2s;
+    transition: opacity var(--transition-time);
 }
 
 .background-secondary img:hover {
     opacity: 100%;
-}
-
-/* Infinite Scroll Animation */
-@keyframes loop-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
-
-.animate-loop-scroll {
-    animation: loop-scroll 20s linear infinite;
-    white-space: nowrap;
-    display: inline-block;
 }
 
 /* Tooltip System */
@@ -77,7 +66,7 @@ body {
 .icon-tooltip img {
     height: 35px;
     opacity: 50%;
-    transition: opacity 0.2s;
+    transition: opacity var(--transition-time);
 }
 
 .icon-tooltip:hover img {
@@ -99,7 +88,7 @@ body {
     transform: translateX(-50%);
     opacity: 0;
     white-space: nowrap;
-    transition: opacity 0.2s;
+    transition: opacity var(--transition-time);
 }
 
 .icon-tooltip:hover .tooltip-text {
@@ -107,12 +96,13 @@ body {
     opacity: 1;
 }
 
+/* Skills Carousel Animations */
 .scroll {
     position: relative;
     display: flex;
     width: 900px;
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
 .scroll div {
@@ -126,26 +116,6 @@ body {
     animation-delay: calc(var(--time)/-2);
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll2 {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-200%);
-    }
-}
-
 .scroll div img {
     max-width: 100px;
     scale: 0.8;
@@ -156,6 +126,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Background Effects */
+.background-gloom {
+    background: radial-gradient(
+            circle closest-corner at center 125px,
+            var(--select-color-text),
+            #191b1f 70%
+    ) no-repeat;
 }
 
 .background-gloom::after,
@@ -183,14 +162,7 @@ body {
     transform: translate(-50%, 10%);
 }
 
-/* Gradiente apenas na primeira seção */
-.background-gloom {
-    background: radial-gradient(
-            circle closest-corner at center 125px,
-            var(--select-color-text),
-            #191b1f 70%
-    ) no-repeat;
-}
+/* Noise Effect */
 .noise {
     position: fixed;
     top: -50%;
@@ -200,24 +172,38 @@ body {
     width: 200%;
     height: 200vh;
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: noise-animation .2s infinite;
     opacity: .3;
     visibility: visible;
+    animation: noise-animation var(--noise-animation-time) infinite;
+}
+
+@keyframes loop-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes scroll2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200%); }
 }
 
 @keyframes noise-animation {
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) }
-    20% { transform: translate(-10%,5%) }
-    30% { transform: translate(5%,-10%) }
-    40% { transform: translate(-5%,15%) }
-    50% { transform: translate(-10%,5%) }
-    60% { transform: translate(15%,0) }
-    70% { transform: translate(0,10%) }
-    80% { transform: translate(-15%,0) }
-    90% { transform: translate(10%,5%) }
-    100% { transform: translate(5%,0) }
+    0% { transform: translate(0,0); }
+    10% { transform: translate(-5%,-5%); }
+    20% { transform: translate(-10%,5%); }
+    30% { transform: translate(5%,-10%); }
+    40% { transform: translate(-5%,15%); }
+    50% { transform: translate(-10%,5%); }
+    60% { transform: translate(15%,0); }
+    70% { transform: translate(0,10%); }
+    80% { transform: translate(-15%,0); }
+    90% { transform: translate(10%,5%); }
+    100% { transform: translate(5%,0); }
 }
 
 @keyframes enter-animation {
@@ -230,8 +216,19 @@ body {
         opacity: 1;
     }
 }
+
+.animate-loop-scroll {
+    animation: loop-scroll var(--loop-scroll-time) linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.image-animation {
+    animation: enter-animation var(--enter-animation-time) 1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .image-animation {
-        animation: enter-animation 0.8s 1;
+        animation: enter-animation var(--enter-animation-time) 1;
     }
 }
