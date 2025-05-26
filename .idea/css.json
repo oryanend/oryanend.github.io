@@ -1,0 +1,12 @@
+{
+  "properties": [
+    {
+      "name": "animation-timeline",
+      "values": ["scroll()", "view()", "auto", "none"]
+    },
+    {
+      "name": "scroll-timeline",
+      "values": ["none", "<custom-ident>"]
+    }
+  ]
+}
