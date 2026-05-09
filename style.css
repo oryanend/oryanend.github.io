@@ -23,6 +23,18 @@ body {
 ;
 }
 
+#historia{
+    background-color: var(--secondary-background);
+    border-radius: 2rem;
+}
+
+strong {
+    font-weight: bolder;
+    background: var(--select-color-text);
+    border-radius: 4px;
+    padding: 0px 3px 0px 3px;
+}
+
 .link-text-navbar {
     color: var(--color-text);
     transition: color var(--transition-time);
